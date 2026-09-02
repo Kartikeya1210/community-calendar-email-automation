@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+
+# Never commit member lists, generated calendars, exports, or credentials.
+contacts/
+campaigns/
+output/
+downloads/
+*.csv
+*.pdf
+*.docx
+*credential*.json
+*client_secret*.json
+*token*.json
+
