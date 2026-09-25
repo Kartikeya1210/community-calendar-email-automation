@@ -38,6 +38,32 @@ flowchart LR
 
 Read [the developer guide](docs/developer-guide.md) for the complete explanation, [the project log](docs/project-log.md) for key delivery decisions, and [the evaluation plan](docs/evaluations.md) for how reliability was measured.
 
+## Offline demo and verification
+
+Requires Node.js 22. No installation or credentials are needed for the preview:
+
+```sh
+npm run demo
+npm test
+```
+
+Open `demo-output/reminder.html` to inspect a fictional reminder. The `.eml` file shows the MIME alternatives. Nothing is queued or sent. Tests cover recipient validation, header injection, escaped event content, and plain-text/HTML MIME structure.
+
+This demo, tests and provenance notes were newly added on September 25, 2026. The delivery service was recovered from the existing personal project. See [PROVENANCE.md](PROVENANCE.md) and [docs/DEMO.md](docs/DEMO.md).
+
+## Offline demo and verification
+
+Requires Node.js 22. No installation or credentials are needed for the preview:
+
+```sh
+npm run demo
+npm test
+```
+
+Open `demo-output/reminder.html` to inspect a fictional reminder. The `.eml` file shows the MIME alternatives. Nothing is queued or sent. Tests cover recipient validation, header injection, escaped event content, and plain-text/HTML MIME structure.
+
+This demo, tests and provenance notes were newly added on September 25, 2026. The delivery service was recovered from the existing personal project. See [PROVENANCE.md](PROVENANCE.md) and [docs/DEMO.md](docs/DEMO.md).
+
 ## Safe local setup
 
 1. Copy `.env.example` to `.env` and replace only the placeholders for a non-production test project.
@@ -45,6 +71,14 @@ Read [the developer guide](docs/developer-guide.md) for the complete explanation
 3. Run `npm install`.
 4. Run `npm run check` to validate the service source.
 5. Deploy only after configuring managed secrets, IAM roles, and a private attachment bucket as described in the developer guide.
+
+## Reliability limits
+
+Cloud Tasks, Firestore and Gmail integration were not exercised in this reconstruction. The send endpoint relies on correct Cloud Run IAM/OIDC configuration, not an application-layer bearer check. Do not expose the cloud service publicly without configuring that protection. A successful Gmail send followed by a failed status write can cause a retry to send twice; this is not exactly-once delivery. Batch scheduling is sequential and may partially succeed if a later cloud call fails. The evaluation document is a plan, not measured test results.
+
+## Reliability limits
+
+Cloud Tasks, Firestore and Gmail integration were not exercised in this reconstruction. The send endpoint relies on correct Cloud Run IAM/OIDC configuration, not an application-layer bearer check. Do not expose the cloud service publicly without configuring that protection. A successful Gmail send followed by a failed status write can cause a retry to send twice; this is not exactly-once delivery. Batch scheduling is sequential and may partially succeed if a later cloud call fails. The evaluation document is a plan, not measured test results.
 
 ## Repository boundaries
 

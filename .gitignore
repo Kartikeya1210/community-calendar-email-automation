@@ -17,3 +17,9 @@ downloads/
 *client_secret*.json
 *token*.json
 
+
+demo-output/
+__pycache__/
+.venv/
+.env.*
+!.env.example

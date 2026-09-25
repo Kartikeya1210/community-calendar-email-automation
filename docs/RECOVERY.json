@@ -1,0 +1,44 @@
+[
+  {
+    "file": "src/config.js",
+    "source_sha256": "ad76592987db6f223973db3f0aeae364412bad2f346b71403995e5b321af947c",
+    "delivered_sha256": "ad76592987db6f223973db3f0aeae364412bad2f346b71403995e5b321af947c",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/email.js",
+    "source_sha256": "38a0ce984b8f98c833fb39018d96caa3b5cd71f1082cde4584a07170b19748a0",
+    "delivered_sha256": "38a0ce984b8f98c833fb39018d96caa3b5cd71f1082cde4584a07170b19748a0",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/gmail.js",
+    "source_sha256": "7a325586a7e4e7c7544abd0527ccf5c02727b62452da84a86a15ecddbc90c873",
+    "delivered_sha256": "7a325586a7e4e7c7544abd0527ccf5c02727b62452da84a86a15ecddbc90c873",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/jobs.js",
+    "source_sha256": "7773053c4a3fc53b7832b3bc139667fc445c568575221e0f969793de83efa804",
+    "delivered_sha256": "7773053c4a3fc53b7832b3bc139667fc445c568575221e0f969793de83efa804",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/server.js",
+    "source_sha256": "a051e3a167d112d9c56e65405180e579db3f15de31bce783969f9d49a6b6f7b2",
+    "delivered_sha256": "a051e3a167d112d9c56e65405180e579db3f15de31bce783969f9d49a6b6f7b2",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/store.js",
+    "source_sha256": "4afe7e89f2d490acc51620313aaee6996ec4b9730d59701c613ae3038690b21f",
+    "delivered_sha256": "4afe7e89f2d490acc51620313aaee6996ec4b9730d59701c613ae3038690b21f",
+    "status": "recovered unchanged"
+  },
+  {
+    "file": "src/templates.js",
+    "source_sha256": "01bd799f3294375725044dc0b4e6a17ba3c30a0dcfff7286624172eb5d2c2232",
+    "delivered_sha256": "01bd799f3294375725044dc0b4e6a17ba3c30a0dcfff7286624172eb5d2c2232",
+    "status": "recovered unchanged"
+  }
+]
