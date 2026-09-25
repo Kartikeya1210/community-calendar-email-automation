@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test",
-    "check": "node --check src/server.js && node --check src/email.js && node --check src/jobs.js"
+    "check": "node --check src/server.js && node --check src/email.js && node --check src/jobs.js",
+    "demo": "node demo.js"
   },
   "dependencies": {
     "@google-cloud/firestore": "^7.11.0",
